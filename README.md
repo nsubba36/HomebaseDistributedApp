@@ -122,25 +122,7 @@ Technologies used throughout the project include:
 A complete demonstration of the HomeBase distributed application is
 available on YouTube.
 
-[▶ Watch the HomeBase Application Demo on YouTube]([YOUR_YOUTUBE_VIDEO_LINK](https://www.youtube.com/watch?v=soMRGthNvcE))
-
-------------------------------------------------------------------------
-
-## Suggested Demo Flow
-
-To demonstrate the distributed nature of the system, the video can show
-a record being managed from multiple interfaces:
-
-1.  Create a record using the **web application**.
-2.  Open the **desktop application** and display the same record.
-3.  Update the record through the desktop application.
-4.  Open the **mobile application** and verify that the updated
-    information is available.
-5.  Perform another CRUD operation from the mobile application.
-6.  Return to another interface and verify the change.
-
-This demonstrates that the applications are separate interfaces working
-with shared HomeBase data.
+[Watch the HomeBase Application Demo on YouTube](https://www.youtube.com/watch?v=soMRGthNvcE)
 
 ------------------------------------------------------------------------
 
@@ -167,20 +149,5 @@ Through this semester-long project, I gained experience with:
 -   Designing multiple interfaces around shared data
 -   Integrating web technologies including HTML, CSS, and JavaScript
 
-------------------------------------------------------------------------
 
-## Course
 
-**Enterprise-Wide Computing**
-
-HomeBase was developed throughout the semester as a course project
-focused on applying enterprise computing concepts through the
-development of a distributed, database-driven application.
-
-------------------------------------------------------------------------
-
-## Author
-
-**Nishan Subba**
-
--   GitHub: [nsubba36](https://github.com/nsubba36)
