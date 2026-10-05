@@ -1,0 +1,292 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : Feb 14, 2026, 11:31:18 AM
+    Author     : nishansubba
+*/
+
+:root {
+    --main-bg-color: #fffffe;
+    --main-card-bg-color: #eff0f3;
+    --main-nav-bg-color: #ff8e3c;
+    --main-text-font-color: #1b2d45;
+    --main-table-bg-color: #eff0f3;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    color: var(--main-text-font-color);
+    font-size: 2rem;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--main-bg-color);
+/*    background-color: #f9f4ef;*/
+}
+
+nav {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    background-color: var(--main-nav-bg-color);
+    padding: 2rem 3rem;
+}
+
+nav .logo-container {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+nav .nav-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    font-size: 2.5rem;
+}
+
+nav .nav-links a {
+    text-decoration: none;
+    color: var(--main-text-font-color);
+}
+
+nav .nav-links a:hover {
+    color: red;
+}
+
+main {
+    padding: 2rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+/*index page*/
+.dashboard {
+    width: 60%;
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+.dashboard .home-card {
+    background-color: var(--main-card-bg-color);
+    padding: 1rem;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.dashboard .home-card .card-title {
+    font-size: 4rem;
+    font-weight: bold;
+}
+
+.dashboard .home-card .value-container {
+    font-size: 3rem;
+}
+
+.table-container {
+    width: 100%;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.table-container table {
+    padding: 1rem;
+    width: 100%;
+    border-collapse: collapse;
+    background-color: var(--main-table-bg-color);
+}
+
+.table-container th, .table-container td {
+    padding: 1rem;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+.table-container th {
+    background-color: var(--main-table-bg-color);
+    font-weight: bold;
+}
+
+form {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 2rem;
+}
+
+form fieldset {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 0.5rem;
+    border: none;
+    font-size: 2.5rem;
+    width: 100%;
+}
+
+form .file-container input[type="file"] {
+    display: none; 
+}
+
+form .file-container .file-btn {
+    background-color: #FFA500;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: inline-block;
+    width: fit-content;
+}
+
+form .file-container .file-btn:hover {
+    background-color: #FFA000;
+}
+
+#file-name {
+    color: #555;
+    font-size: 1.5rem;
+}
+
+form fieldset input, textarea, select {
+    padding: 0.8rem;
+    width: 100%;
+}
+
+.btn-group {
+    width: 100%;
+    font-size: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.btn {
+    display: block;
+    padding: 1rem 3rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 2.5rem;
+    color: white;
+}
+
+.submit-btn {
+    background-color: #00A693;
+}
+
+.submit-btn:hover {
+    background-color: #2cb67d;
+}
+
+.reset-btn {
+    background-color: #E44D2E;
+}
+
+.reset-btn:hover {
+    background-color: #f25042;
+}
+
+.required::after {
+    content: " *";
+    color: red;
+}
+
+.toast-msg {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #2cb67d;
+    color: white;
+    padding: 15px 20px;
+    border-radius: 6px;
+    font-size: 1.6rem;
+    animation: fadeInOut 3s ease forwards;
+}
+
+.success-msg {
+    background-color: #2cb67d;
+}
+
+.error-msg {
+    background-color: #E44D2E;
+}
+
+@keyframes fadeInOut {
+    0% { opacity: 0; transform: translateX(50px); }
+    10% { opacity: 1; transform: translateX(0); }
+    90% { opacity: 1; }
+    100% { opacity: 0; transform: translateX(50px); }
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: #ffffff;
+    width: 500px;
+    max-width: 90%;
+    margin: 8rem auto;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-sizing: border-box;
+}
+
+.close {
+    float: right;
+    font-size: 2rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.modal-content label {
+    display: block;
+    margin-top: 1rem;
+    margin-bottom: 0.4rem;
+}
+
+.modal-content input[type="text"],
+.modal-content textarea {
+    width: 100%;
+    padding: 0.8rem;
+    box-sizing: border-box;
+}
+
+.modal-actions {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
